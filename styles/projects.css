@@ -42,3 +42,62 @@ body {
      width: 30vw;   
      margin: 5em;
     }
+    .box {
+        color:white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    .box:before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    transform:translateY(100%);
+    transition: all 0.25s ;
+    }
+    .box:hover:before {
+    transform: translateY(0);
+    transition-delay: 0s;
+    }
+    .box .caption {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.25s;
+        }
+    .box:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3;
+    }
+    .box h3, .box h5 {
+
+    margin: 0;
+    letter-spacing: 1px;
+
+    }
+    .box h3 {
+    text-transform: 5px;
+    font-weight: 400;
+    margin-bottom: 5px;
+
+
+    }
+    .box h5 {
+    font-size: 25px;
+    background-color: red;
+
+    }
